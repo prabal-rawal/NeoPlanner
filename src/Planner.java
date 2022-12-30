@@ -7,14 +7,9 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 class Planner {
-    private Scanner input;
-    private String name;
-    private String address;
-    private String phone;
-    private String email;
+    private final Scanner input;
     private String response;
     private String fileName;
-    private String task;
 
     public Planner() {
         input = new Scanner(System.in);
@@ -23,13 +18,13 @@ class Planner {
         fileName = "guestList.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         System.out.println("Enter the name of the guest: ");
-        name = input.nextLine();
+        String name = input.nextLine();
         System.out.println("Enter the address of the guest: ");
-        address = input.nextLine();
+        String address = input.nextLine();
         System.out.println("Enter the phone number of the guest: ");
-        phone = input.nextLine();
+        String phone = input.nextLine();
         System.out.println("Enter the email of the guest: ");
-        email = input.nextLine();
+        String email = input.nextLine();
         outputFile.println("Name: " + name);
         outputFile.println("Address: " + address);
         outputFile.println("Phone: " + phone);
@@ -47,7 +42,7 @@ class Planner {
         fileName = "toDoList.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         System.out.println("Enter the task: ");
-        task = input.nextLine();
+        String task = input.nextLine();
         outputFile.println("Task: " + task);
         outputFile.close();
         System.out.println("Do you want to add another task? (y/n)");
