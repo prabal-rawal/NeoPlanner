@@ -1,0 +1,2 @@
+Category: Food
+Expense: 500.0

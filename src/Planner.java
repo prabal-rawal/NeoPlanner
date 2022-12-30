@@ -15,7 +15,7 @@ class Planner {
         input = new Scanner(System.in);
     }
     public void guestList() throws IOException {
-        fileName = "guestList.txt";
+        fileName = "Outputs/Guestlist/guestList.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         System.out.println("Enter the name of the guest: ");
         String name = input.nextLine();
@@ -39,7 +39,7 @@ class Planner {
         }
     }
     public void toDoList() throws IOException {
-        fileName = "toDoList.txt";
+        fileName = "Outputs/toDoLists/toDoList.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         System.out.println("Enter the task: ");
         String task = input.nextLine();
@@ -54,7 +54,7 @@ class Planner {
         }
     }
     public void budget() throws IOException {
-        fileName = "budget.txt";
+        fileName = "Outputs/budgets/budget.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         double expense;
         String category;
@@ -74,7 +74,7 @@ class Planner {
         }
     }
     public void eventSchedule() throws IOException {
-        fileName = "eventSchedule.txt";
+        fileName = "Outputs/eventschedules/eventSchedule.txt";
         PrintWriter outputFile = new PrintWriter(fileName);
         String time;
         String location;
@@ -102,6 +102,8 @@ class Planner {
         }
     }
     public void greetingCard() {
+        System.out.println("Please Enter the recipient name: ");
+        String name = input.nextLine();
         final int WIDTH = 400;
         final int HEIGHT = 300;
         final Font FONT = new Font("SansSerif", Font.BOLD, 24);
@@ -111,12 +113,12 @@ class Planner {
         g.fillRect(0, 0, WIDTH, HEIGHT);
         g.setFont(FONT);
         g.setColor(Color.BLACK);
-        String message = "Happy New Year!";
+        String message = "Happy New Year! " + name;
         int x = (WIDTH - g.getFontMetrics().stringWidth(message)) / 2;
         int y = HEIGHT / 2;
         g.drawString(message, x, y);
         try {
-            ImageIO.write(image, "jpg", new File("greeting_card.jpg"));
+            ImageIO.write(image, "jpg", new File("Outputs/greetingCards/greeting_card.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
