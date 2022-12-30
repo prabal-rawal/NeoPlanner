@@ -1,4 +1,0 @@
-Name: MLH
-Address: USA
-Phone: 9999999999
-Email: mlh@gmail.com
