@@ -34,8 +34,6 @@ class Planner {
         response = input.nextLine();
         if (response.equalsIgnoreCase("y")) {
             guestList();
-        } else {
-            System.out.println("Thank you for using the New Year Planner");
         }
     }
     public void toDoList() throws IOException {
@@ -49,8 +47,6 @@ class Planner {
         response = input.nextLine();
         if (response.equalsIgnoreCase("y")) {
             toDoList();
-        } else {
-            System.out.println("Thank you for using the New Year Planner");
         }
     }
     public void budget() throws IOException {
@@ -69,8 +65,6 @@ class Planner {
         response = input.nextLine();
         if (response.equalsIgnoreCase("y")) {
             budget();
-        } else {
-            System.out.println("Thank you for using the New Year Planner");
         }
     }
     public void eventSchedule() throws IOException {
@@ -97,8 +91,6 @@ class Planner {
         response = input.nextLine();
         if (response.equalsIgnoreCase("y")) {
             eventSchedule();
-        } else {
-            System.out.println("Thank you for using the New Year Planner");
         }
     }
     public void greetingCard() {
@@ -122,7 +114,7 @@ class Planner {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Thank you for using the New Year Planner");
+
     }
 
 }
